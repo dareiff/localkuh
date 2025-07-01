@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   localkuh:
     build: .
@@ -7,5 +5,7 @@ services:
       - "3000:3000"
     environment:
       - API_KEY=${API_KEY}
+      - TEMPLATE_ID=${TEMPLATE_ID}
+      - PRINTER_ID=${PRINTER_ID}
       - PORT=3000
     restart: unless-stopped
