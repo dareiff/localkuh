@@ -6,11 +6,10 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const API_KEY = process.env.API_KEY ||
-  "drgAPz9x2QAGzQa3tY51K1CqdquS8bpkH9yGnXLt2b2uXpModqHDYh1GD2djWy7M";
+const API_KEY = process.env.API_KEY;
 const API_BASE_URL = "https://app.printercow.com/api";
-const TEMPLATE_ID = "tpl_uhmUPmvSRtKtAPLN";
-const PRINTER_ID = "prt_oV9uudbxEbJ3QzRv";
+const TEMPLATE_ID = process.env.TEMPLATE_ID;
+const PRINTER_ID = process.env.PRINTER_ID;
 
 app.use(express.json());
 app.use(express.static("."));
